@@ -15,10 +15,6 @@ venv/
 *.toc
 *.bbl
 *.blg
-
-# Large data files
-fraud_dataset.csv
-
 # IDE
 .vscode/
 .idea/

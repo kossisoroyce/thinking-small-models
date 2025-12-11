@@ -88,11 +88,11 @@ pip install -r requirements.txt
 
 ```python
 from thinking_pipeline_best import train_pipeline, ThinkingXGBoostPipeline
-from data_generator import get_feature_groups
+from data_generator import get_feature_groups, get_all_features
 import pandas as pd
 
 # Load data
-df = pd.read_csv('fraud_dataset.csv')
+df = pd.read_csv('data/fraud_dataset.csv')
 X = df[get_all_features()]
 y = df['is_fraud']
 
@@ -133,14 +133,18 @@ print(pipeline.explain(X_test.iloc[[0]]))
 
 ```
 thinking-small-models/
-├── README.md                    # This file
-├── FRAMEWORK.md                 # RQS framework specification
-├── requirements.txt             # Dependencies (pinned)
-├── data_generator.py            # Synthetic dataset generator
-├── thinking_pipeline_best.py    # Best pipeline implementation
-├── rqs_evaluator.py             # RQS evaluation framework
-├── thinking_xgboost_fraud.ipynb # Demo notebook
-└── fraud_dataset.csv            # Generated dataset (30K samples)
+├── README.md                     # This file
+├── requirements.txt              # Dependencies (pinned)
+├── LICENSE                       # MIT license
+├── data/                         # Data assets
+│   └── fraud_dataset.csv         # Generated dataset (30K samples)
+├── paper/                        # Paper artifacts
+│   └── paper.pdf                 # Compiled paper
+├── notebooks/                    # Jupyter notebooks
+│   └── thinking_xgboost_fraud.ipynb
+├── data_generator.py             # Synthetic dataset generator
+├── thinking_pipeline_best.py     # Best pipeline implementation
+└── rqs_evaluator.py              # RQS evaluation framework
 ```
 
 ## Key Files
@@ -150,7 +154,6 @@ thinking-small-models/
 | `thinking_pipeline_best.py` | Complete 4-stage thinking pipeline |
 | `rqs_evaluator.py` | Reasoning Quality Score evaluator |
 | `data_generator.py` | Synthetic fraud dataset generator |
-| `FRAMEWORK.md` | Formal RQS metric definitions |
 
 ## Reasoning Quality Score (RQS) Framework
 

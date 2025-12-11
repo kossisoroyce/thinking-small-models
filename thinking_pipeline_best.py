@@ -252,7 +252,7 @@ if __name__ == "__main__":
     from rqs_evaluator import RQSEvaluator
     
     # Load data
-    df = pd.read_csv('fraud_dataset.csv')
+    df = pd.read_csv('data/fraud_dataset.csv')
     X = df[get_all_features()]
     y = df['is_fraud']
     

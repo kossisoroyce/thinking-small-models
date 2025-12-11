@@ -210,7 +210,8 @@ if __name__ == "__main__":
         seed=42
     )
     
-    output_path = Path(__file__).parent / "fraud_dataset.csv"
+    output_path = Path(__file__).parent / "data" / "fraud_dataset.csv"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(output_path, index=False)
     
     print(f"Dataset saved to: {output_path}")

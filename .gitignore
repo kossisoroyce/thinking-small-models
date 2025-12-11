@@ -15,6 +15,10 @@ venv/
 *.toc
 *.bbl
 *.blg
+# Internal docs and paper sources (kept local only)
+docs/
+paper/paper.md
+paper/paper.tex
 # IDE
 .vscode/
 .idea/
